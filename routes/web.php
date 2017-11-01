@@ -12,7 +12,7 @@
 */
 $router->group(['prefix'=>'v1','namespace'=>'Api'],function()use ($router){
     $router->post('order', 'OrderController@order');
-    
+    $router->post('createcollections', 'CollectionsController@create');
 
 });
 
