@@ -10,6 +10,12 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
+$router->group(['prefix'=>'v1','namespace'=>'Api'],function()use ($router){
+    $router->post('order', 'OrderController@order');
+    
+
+});
+
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
